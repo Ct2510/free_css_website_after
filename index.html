@@ -68,20 +68,30 @@
          /* 添加按钮样式 */
          .send_btn {
             background-color: #0056b3; /* 更深的蓝色 */
-            color: #ffffff; /* 白色文字 */
+            color: #ffffff !important; /* 纯白色文字 */
+            font-weight: 500;
+            padding: 12px 24px;
             border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
+            border-radius: 4px;
             transition: background-color 0.3s ease;
          }
          .send_btn:hover {
-            background-color: #003d80; /* 悬停时更深的蓝色 */
+            background-color: #003d80; /* 悬停时更深的颜色 */
+            color: #ffffff !important;
          }
          .send_btn:focus {
-            outline: 2px solid #0056b3;
+            outline: 3px solid #80bdff;
             outline-offset: 2px;
+         }
+         /* About 区域样式优化 */
+         #about.about {
+            background-color: #f8f9fa; /* 更浅的背景色 */
+            color: #212529;           /* 更深的文字颜色 */
+         }
+         
+         #about.about h2 {
+            color: #1a1a1a;          /* 加深标题颜色 */
+            font-weight: 600;
          }
       </style>
       <!-- bootstrap css -->
@@ -123,6 +133,8 @@
             src: local('Noto Serif Bold');
          }
       </style>
+      <!-- 添加 Animate.css CDN -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -584,7 +596,7 @@
                   <div class="row">
                      <div class="col-md-12">
                         <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
-                     </div>减少未使用的 CSS
+                     </div>
                   </div>
                </div>
             </div>
