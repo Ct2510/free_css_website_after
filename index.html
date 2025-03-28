@@ -98,10 +98,31 @@
       <link rel="stylesheet" href="css/font-awesome.min.css">
       <!-- Fancybox -->
       <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-      <!-- Google Fonts -->
+      <!-- Google Fonts 优化 -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap">
+      </noscript>
+      <style>
+         /* 添加字体回退方案 */
+         @font-face {
+            font-family: 'Noto Serif';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Noto Serif');
+         }
+         @font-face {
+            font-family: 'Noto Serif';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: local('Noto Serif Bold');
+         }
+      </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -110,7 +131,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="images/loading.gif" alt="#" width="50" height="50" /></div>
       </div>
       <!-- end loader -->
       <div id="mySidepanel" class="sidepanel">
@@ -137,14 +158,16 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.html"><img src="images/logo.png" alt="#" width="150" height="60" /></a>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                      <div class="right_bottun">
-                        <button class="openbtn" onclick="openNav()"><img src="images/menu_icon.png" alt="#"/> </button> 
+                        <button class="openbtn" onclick="openNav()">
+                           <img src="images/menu_icon.png" alt="#" width="30" height="30"/>
+                        </button> 
                      </div>
                   </div>
                </div>
@@ -237,14 +260,14 @@
                      </div>
                      <div class="col-md-12">
                         <div class="about_img">
-                           <figure><img src="images/about_img.webp" alt="#"/></figure>
+                           <figure><img src="images/about_img.webp" alt="#" width="540" height="400"/></figure>
                         </div>
                      </div>
                   </div>
                </div>
                <div class="col-md-7">
                   <div class="about_right">
-                     <figure><img src="images/about_right.webp" alt="#"/></figure>
+                     <figure><img src="images/about_right.webp" alt="#" width="600" height="450"/></figure>
                   </div>
                </div>
             </div>
@@ -264,7 +287,7 @@
                </div>
                <div class="col-md-6 padding_right2">
                   <div class="software_img">
-                     <figure><img src="images/software_img.webp" alt="#" style="width: 468px; height: 660px; object-fit: cover;"/></figure>
+                     <figure><img src="images/software_img.webp" alt="#" width="468" height="660" style="object-fit: cover;"/></figure>
                   </div>
                </div>
             </div>
@@ -326,7 +349,7 @@
             <div class="row">
                <div class="col-md-4">
                   <div class="team_box">
-                     <figure><img src="images/team_img1.webp" alt="#"/></figure>
+                     <figure><img src="images/team_img1.webp" alt="#" width="360" height="400"/></figure>
                      <div class="social_box">
                         <ul class="social_team">
                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -341,7 +364,7 @@
                </div>
                <div class="col-md-4">
                   <div class="team_box">
-                     <figure><img src="images/team_img2.webp" alt="#"/></figure>
+                     <figure><img src="images/team_img2.webp" alt="#" width="360" height="400"/></figure>
                      <div class="social_box">
                         <ul class="social_team">
                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -356,7 +379,7 @@
                </div>
                <div class="col-md-4">
                   <div class="team_box">
-                     <figure><img src="images/team_img3.webp" alt="#"/></figure>
+                     <figure><img src="images/team_img3.webp" alt="#" width="360" height="400"/></figure>
                      <div class="social_box">
                         <ul class="social_team">
                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -461,10 +484,10 @@
                                  <div class="row">
                                     <div class="col-md-12">
                                        <div class="testimonial_box">
-                                          <figure><img src="images/our.png" alt="#"/></figure>
+                                          <figure><img src="images/our.png" alt="#" width="120" height="120"/></figure>
                                           <h3>Due markes <br><span class="blu">Rental</span></h3>
                                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                                          <i><img src="images/test.png" alt="#"/></i>
+                                          <i><img src="images/test.png" alt="#" width="40" height="40"/></i>
                                        </div>
                                     </div>
                                  </div>
@@ -477,10 +500,10 @@
                                  <div class="row">
                                     <div class="col-md-12">
                                        <div class="testimonial_box">
-                                          <figure><img src="images/our.png" alt="#"/></figure>
+                                          <figure><img src="images/our.png" alt="#" width="120" height="120"/></figure>
                                           <h3>Due markes <br><span class="blu">Rental</span></h3>
                                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                                          <i><img src="images/test.png" alt="#"/></i>
+                                          <i><img src="images/test.png" alt="#" width="40" height="40"/></i>
                                        </div>
                                     </div>
                                  </div>
@@ -494,10 +517,10 @@
                                     <div class="col-md-12">
                                        <div class="full cross_layout">
                                           <div class="testimonial_box">
-                                             <figure><img src="images/our.png" alt="#"/></figure>
+                                             <figure><img src="images/our.png" alt="#" width="120" height="120"/></figure>
                                              <h3>Due markes <br><span class="blu">Rental</span></h3>
                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                                             <i><img src="images/test.png" alt="#"/></i>
+                                             <i><img src="images/test.png" alt="#" width="40" height="40"/></i>
                                           </div>
                                        </div>
                                     </div>
